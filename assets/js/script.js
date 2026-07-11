@@ -356,3 +356,22 @@ button.disabled=false;
 });
 
 }
+
+
+
+
+
+
+
+const response = await fetch(form.action, {
+    method: "POST",
+    body: data,
+    headers: {
+        "Accept": "application/json"
+    }
+});
+
+console.log(response.status);
+
+const result = await response.text();
+console.log(result);

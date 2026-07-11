@@ -196,26 +196,163 @@ cursor.style.height="28px";
 
 
 
-const card=document.querySelector(".profile-card");
+const card = document.querySelector(".profile-wrapper");
 
-card.addEventListener("mousemove",(e)=>{
+if (card) {
 
-const rect=card.getBoundingClientRect();
+    card.addEventListener("mousemove", (e) => {
 
-const x=e.clientX-rect.left;
+        const rect = card.getBoundingClientRect();
 
-const y=e.clientY-rect.top;
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
 
-const rotateY=((x/rect.width)-0.5)*16;
+        const rotateY = ((x / rect.width) - 0.5) * 16;
+        const rotateX = ((y / rect.height) - 0.5) * -16;
 
-const rotateX=((y/rect.height)-0.5)*-16;
+        card.style.transform =
+            `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
 
-card.style.transform=`perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+    });
+
+    card.addEventListener("mouseleave", () => {
+
+        card.style.transform =
+            "perspective(1000px) rotateX(0) rotateY(0)";
+
+    });
+
+}
+
+
+
+
+/*=====================================
+MOBILE MENU
+=====================================*/
+
+const menuBtn = document.querySelector(".menu-toggle");
+const navMenu = document.querySelector(".nav-links");
+const overlay = document.querySelector(".menu-overlay");
+
+if (menuBtn && navMenu) {
+
+    // Open / Close Menu
+    menuBtn.addEventListener("click", () => {
+
+        menuBtn.classList.toggle("active");
+        navMenu.classList.toggle("active");
+
+        if (overlay) {
+            overlay.classList.toggle("active");
+        }
+
+        document.body.classList.toggle("menu-open");
+
+    });
+
+    // Close on Menu Link Click
+    document.querySelectorAll(".nav-links a").forEach(link => {
+
+        link.addEventListener("click", () => {
+
+            menuBtn.classList.remove("active");
+            navMenu.classList.remove("active");
+
+            if (overlay) {
+                overlay.classList.remove("active");
+            }
+
+            document.body.classList.remove("menu-open");
+
+        });
+
+    });
+
+    // Close on Overlay Click
+    if (overlay) {
+
+        overlay.addEventListener("click", () => {
+
+            menuBtn.classList.remove("active");
+            navMenu.classList.remove("active");
+            overlay.classList.remove("active");
+            document.body.classList.remove("menu-open");
+
+        });
+
+    }
+
+}
+
+
+
+
+
+
+
+/*=====================================
+CONTACT FORM
+=====================================*/
+
+const form = document.getElementById("contactForm");
+
+if(form){
+
+form.addEventListener("submit", async function(e){
+
+e.preventDefault();
+
+const button=document.getElementById("submitBtn");
+const message=document.querySelector(".form-message");
+
+button.innerHTML="Sending...";
+button.disabled=true;
+
+const data=new FormData(form);
+
+try{
+
+const response=await fetch(form.action,{
+
+method:"POST",
+
+body:data,
+
+headers:{
+'Accept':'application/json'
+}
 
 });
 
-card.addEventListener("mouseleave",()=>{
+if(response.ok){
 
-card.style.transform="perspective(1000px) rotateX(0) rotateY(0)";
+message.innerHTML="✅ Thank you! Your message has been sent successfully.";
+
+message.style.color="#22c55e";
+
+form.reset();
+
+}else{
+
+message.innerHTML="❌ Something went wrong. Please try again.";
+
+message.style.color="#ef4444";
+
+}
+
+}catch(error){
+
+message.innerHTML="❌ Network error. Please try again.";
+
+message.style.color="#ef4444";
+
+}
+
+button.innerHTML="Send Message";
+
+button.disabled=false;
 
 });
+
+}

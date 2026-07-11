@@ -1,0 +1,5 @@
+User-agent: *
+
+Allow: /
+
+Sitemap: https://zeeshanrao60003-cyber.github.io/portfolio-2026/sitemap.xml

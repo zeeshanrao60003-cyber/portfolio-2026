@@ -289,89 +289,72 @@ if (menuBtn && navMenu) {
 
 
 
-
-
 /*=====================================
 CONTACT FORM
 =====================================*/
 
-const form = document.getElementById("contactForm");
+const contactForm = document.getElementById("contactForm");
 
-if(form){
+if(contactForm){
 
-form.addEventListener("submit", async function(e){
+contactForm.addEventListener("submit",async(e)=>{
 
 e.preventDefault();
 
-const button=document.getElementById("submitBtn");
-const message=document.querySelector(".form-message");
+const submitBtn=document.getElementById("submitBtn");
+const status=document.getElementById("formStatus");
 
-button.innerHTML="Sending...";
-button.disabled=true;
+submitBtn.disabled=true;
+submitBtn.innerHTML="Sending...";
 
-const data=new FormData(form);
+status.innerHTML="";
+status.className="";
 
 try{
 
-const response=await fetch(form.action,{
+const response=await fetch(contactForm.action,{
 
 method:"POST",
 
-body:data,
+body:new FormData(contactForm),
 
 headers:{
-'Accept':'application/json'
+"Accept":"application/json"
 }
 
 });
 
+const result=await response.json();
+
 if(response.ok){
 
-message.innerHTML="✅ Thank you! Your message has been sent successfully.";
+status.innerHTML="✅ Thank you! Your message has been sent successfully.";
 
-message.style.color="#22c55e";
+status.classList.add("success");
 
-form.reset();
+contactForm.reset();
 
 }else{
 
-message.innerHTML="❌ Something went wrong. Please try again.";
+status.innerHTML=result.errors
+?result.errors.map(error=>error.message).join("<br>")
+:"❌ Something went wrong.";
 
-message.style.color="#ef4444";
+status.classList.add("error");
 
 }
 
 }catch(error){
 
-message.innerHTML="❌ Network error. Please try again.";
+status.innerHTML="❌ Network error. Please try again.";
 
-message.style.color="#ef4444";
+status.classList.add("error");
 
 }
 
-button.innerHTML="Send Message";
-
-button.disabled=false;
+submitBtn.disabled=false;
+submitBtn.innerHTML="Send Message";
 
 });
 
 }
-
-
-
-
-
-
-
-const response = await fetch(form.action, {
-    method: "POST",
-    body: data,
-    headers: {
-        "Accept": "application/json"
-    }
-});
-
-console.log(response.status);
-
-const result = await response.text();
-console.log(result);

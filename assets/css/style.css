@@ -4601,11 +4601,11 @@ transform:rotate(-10deg) scale(1.12);
 }
 
 
-/*=====================================
-FORM MESSAGE
-=====================================*/
 
-.form-message{
+
+
+
+#formStatus{
 
 margin-top:20px;
 
@@ -4614,5 +4614,17 @@ font-size:15px;
 font-weight:600;
 
 transition:.3s;
+
+}
+
+#formStatus.success{
+
+color:#22c55e;
+
+}
+
+#formStatus.error{
+
+color:#ef4444;
 
 }

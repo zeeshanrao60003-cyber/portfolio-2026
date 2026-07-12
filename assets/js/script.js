@@ -75,18 +75,22 @@ counters.forEach(counter => {
 
 const progressBar = document.querySelector(".progress-bar");
 
-window.addEventListener("scroll", () => {
+if (progressBar) {
 
-    const scrollTop = window.scrollY;
+    window.addEventListener("scroll", () => {
 
-    const height =
-        document.documentElement.scrollHeight - window.innerHeight;
+        const scrollTop = window.scrollY;
 
-    const progress = (scrollTop / height) * 100;
+        const height =
+            document.documentElement.scrollHeight - window.innerHeight;
 
-    progressBar.style.width = progress + "%";
+        const progress = (scrollTop / height) * 100;
 
-});
+        progressBar.style.width = progress + "%";
+
+    });
+
+}
 
 
 const sections = document.querySelectorAll("section");
@@ -128,71 +132,76 @@ window.addEventListener("scroll", () => {
 
 const header = document.querySelector(".header");
 
-window.addEventListener("scroll",()=>{
+if (header) {
 
-if(window.scrollY>80){
+    window.addEventListener("scroll", () => {
 
-header.classList.add("scrolled");
+        if (window.scrollY > 80) {
 
-}else{
+            header.classList.add("scrolled");
 
-header.classList.remove("scrolled");
+        } else {
+
+            header.classList.remove("scrolled");
+
+        }
+
+    });
 
 }
 
-});
 
 
 
+window.addEventListener("load", () => {
 
+    const preloader = document.getElementById("preloader");
 
-window.addEventListener("load",()=>{
+    if (!preloader) return;
 
-const preloader=document.getElementById("preloader");
+    preloader.style.opacity = "0";
 
-preloader.style.opacity="0";
+    setTimeout(() => {
 
-setTimeout(()=>{
+        preloader.style.display = "none";
 
-preloader.style.display="none";
-
-},700);
-
-});
-
-
-
-const cursor=document.querySelector(".cursor-glow");
-
-document.addEventListener("mousemove",(e)=>{
-
-cursor.style.left=e.clientX+"px";
-
-cursor.style.top=e.clientY+"px";
+    }, 700);
 
 });
 
 
-document.querySelectorAll("a,button,.project-card,.skill-card")
-.forEach(el=>{
 
-el.addEventListener("mouseenter",()=>{
+const cursor = document.querySelector(".cursor-glow");
 
-cursor.style.width="65px";
+if (cursor) {
 
-cursor.style.height="65px";
+    document.addEventListener("mousemove", (e) => {
 
-});
+        cursor.style.left = e.clientX + "px";
+        cursor.style.top = e.clientY + "px";
 
-el.addEventListener("mouseleave",()=>{
+    });
 
-cursor.style.width="28px";
+    document.querySelectorAll("a,button,.project-card,.skill-card")
+        .forEach(el => {
 
-cursor.style.height="28px";
+            el.addEventListener("mouseenter", () => {
 
-});
+                cursor.style.width = "65px";
+                cursor.style.height = "65px";
 
-});
+            });
+
+            el.addEventListener("mouseleave", () => {
+
+                cursor.style.width = "28px";
+                cursor.style.height = "28px";
+
+            });
+
+        });
+
+}
 
 
 

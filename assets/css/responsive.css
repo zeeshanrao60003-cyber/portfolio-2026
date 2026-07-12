@@ -726,3 +726,191 @@ height:26px;
 }
 
 }
+
+
+
+
+/*=====================================
+PROJECTS HERO
+=====================================*/
+
+@media(max-width:992px){
+
+.projects-hero h1{
+
+font-size:56px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.projects-hero{
+
+padding:170px 0 90px;
+
+}
+
+.projects-hero h1{
+
+font-size:42px;
+
+line-height:1.15;
+
+letter-spacing:-1px;
+
+}
+
+.projects-hero p{
+
+font-size:18px;
+
+}
+
+}
+
+@media(max-width:576px){
+
+.projects-hero h1{
+
+font-size:34px;
+
+}
+
+.projects-hero p{
+
+font-size:16px;
+
+}
+
+.projects-hero-buttons{
+
+flex-direction:column;
+
+align-items:center;
+
+}
+
+.projects-hero-buttons .btn{
+
+width:100%;
+
+max-width:280px;
+
+}
+
+}
+
+
+
+/*=====================================
+FEATURED CASE STUDY
+=====================================*/
+
+@media(max-width:992px){
+
+.case-study-wrapper{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.case-content h3{
+
+font-size:36px;
+
+}
+
+}
+
+
+
+
+/*=====================================
+PROJECT GRID
+=====================================*/
+
+@media(max-width:992px){
+
+.projects-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.project-body{
+
+padding:24px;
+
+}
+
+.project-body h3{
+
+font-size:26px;
+
+}
+
+}
+
+
+
+/*=====================================
+PROJECT CTA
+=====================================*/
+
+@media(max-width:768px){
+
+.cta-box{
+
+padding:60px 30px;
+
+}
+
+.cta-box h2{
+
+font-size:42px;
+
+}
+
+.cta-box p{
+
+font-size:17px;
+
+}
+
+}
+
+@media(max-width:576px){
+
+.cta-box h2{
+
+font-size:34px;
+
+}
+
+.cta-buttons{
+
+flex-direction:column;
+
+align-items:center;
+
+}
+
+.cta-buttons .btn{
+
+width:100%;
+
+max-width:300px;
+
+}
+
+}

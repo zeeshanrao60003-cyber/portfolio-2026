@@ -384,3 +384,57 @@ item.classList.toggle("active");
 });
 
 });
+
+
+
+/*=========================
+AUTO YEAR
+=========================*/
+
+const year=document.getElementById("year");
+
+if(year){
+
+year.textContent=new Date().getFullYear();
+
+}
+
+/*=========================
+BACK TO TOP
+=========================*/
+
+const backTop=document.getElementById("backTop");
+
+if(backTop){
+
+window.addEventListener("scroll",()=>{
+
+if(window.scrollY>500){
+
+backTop.style.opacity="1";
+
+backTop.style.visibility="visible";
+
+}else{
+
+backTop.style.opacity="0";
+
+backTop.style.visibility="hidden";
+
+}
+
+});
+
+backTop.addEventListener("click",()=>{
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
+
+});
+
+});
+
+}

@@ -2,24 +2,53 @@
 
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-<url>
+    <url>
+        <loc>https://zeeshanrao60003-cyber.github.io/portfolio-2026/</loc>
+        <lastmod>2026-07-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
 
-<loc>https://zeeshanrao60003-cyber.github.io/portfolio-2026/</loc>
+    <url>
+        <loc>https://zeeshanrao60003-cyber.github.io/portfolio-2026/about.html</loc>
+        <lastmod>2026-07-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.95</priority>
+    </url>
 
-<lastmod>2026-07-12</lastmod>
+    <url>
+        <loc>https://zeeshanrao60003-cyber.github.io/portfolio-2026/services.html</loc>
+        <lastmod>2026-07-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.95</priority>
+    </url>
 
-<changefreq>monthly</changefreq>
+    <url>
+        <loc>https://zeeshanrao60003-cyber.github.io/portfolio-2026/projects.html</loc>
+        <lastmod>2026-07-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.90</priority>
+    </url>
 
-<priority>1.0</priority>
+    <url>
+        <loc>https://zeeshanrao60003-cyber.github.io/portfolio-2026/contact.html</loc>
+        <lastmod>2026-07-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.90</priority>
+    </url>
 
-</url>
+    <url>
+        <loc>https://zeeshanrao60003-cyber.github.io/portfolio-2026/privacy.html</loc>
+        <lastmod>2026-07-19</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.50</priority>
+    </url>
 
-<url>
-    <loc>https://zeeshanrao60003-cyber.github.io/portfolio-2026/projects.html</loc>
-    <lastmod>2026-07-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.90</priority>
-</url>
+    <url>
+        <loc>https://zeeshanrao60003-cyber.github.io/portfolio-2026/terms.html</loc>
+        <lastmod>2026-07-19</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.50</priority>
+    </url>
 
 </urlset>
-

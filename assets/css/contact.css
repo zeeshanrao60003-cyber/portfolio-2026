@@ -431,3 +431,154 @@ transition:.35s;
 transform:rotate(-8deg) scale(1.08);
 
 }
+
+
+
+
+/*=====================================
+CONTACT RESPONSIVE
+======================================*/
+
+@media (max-width:1024px){
+
+.contact-hero-grid{
+grid-template-columns:1fr;
+gap:60px;
+text-align:center;
+}
+
+.contact-description{
+margin:0 auto 40px;
+}
+
+.contact-buttons{
+justify-content:center;
+}
+
+.contact-status{
+max-width:650px;
+margin:auto;
+}
+
+.contact-grid{
+grid-template-columns:1fr;
+gap:50px;
+}
+
+.contact-info{
+text-align:center;
+}
+
+.contact-card{
+text-align:left;
+}
+
+.why-grid{
+grid-template-columns:1fr;
+}
+
+}
+
+@media (max-width:768px){
+
+.contact-hero{
+padding:140px 0 80px;
+}
+
+.contact-section,
+.why-contact{
+padding:80px 0;
+}
+
+.contact-title{
+font-size:2.4rem;
+}
+
+.contact-form-wrapper{
+padding:30px;
+}
+
+.contact-card{
+padding:20px;
+}
+
+.contact-icon{
+width:55px;
+height:55px;
+font-size:1.1rem;
+}
+
+.status-card,
+.response-card{
+padding:30px;
+}
+
+.response-card h2{
+font-size:2rem;
+}
+
+.why-card{
+padding:30px;
+}
+
+.why-icon{
+width:60px;
+height:60px;
+font-size:28px;
+margin-bottom:20px;
+}
+
+.contact-buttons{
+flex-direction:column;
+align-items:center;
+}
+
+.contact-buttons .btn{
+width:260px;
+}
+
+}
+
+@media (max-width:480px){
+
+.contact-title{
+font-size:2rem;
+}
+
+.contact-description{
+font-size:1rem;
+}
+
+.contact-form-wrapper{
+padding:22px;
+}
+
+.contact-form input,
+.contact-form textarea{
+padding:16px;
+font-size:.95rem;
+}
+
+.contact-card{
+flex-direction:column;
+align-items:flex-start;
+}
+
+.contact-icon{
+margin-bottom:10px;
+}
+
+.status-card,
+.response-card{
+padding:25px;
+}
+
+.response-card h2{
+font-size:1.7rem;
+}
+
+.why-card{
+padding:25px;
+}
+
+}

@@ -32,19 +32,6 @@ font-family:'Space Grotesk',sans-serif;
 
 }
 
-.container{
-
-width:min(92%,var(--container));
-
-margin:auto;
-
-}
-
-
-
-
-
-
 
 
 
@@ -3592,12 +3579,13 @@ padding:90px 0;
 
 
 
+:root{
+--container:1320px;
+}
+
 .container{
-
-width:min(1320px,92%);
-
+width:min(var(--container),92%);
 margin:auto;
-
 }
 
 

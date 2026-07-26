@@ -32,29 +32,17 @@ ABOUT PAGE
 
 }
 
-.about-image-wrapper{
-
-    width:420px;
-
-    height:420px;
-
-    border-radius:40px;
-
-    overflow:hidden;
-
-    position:relative;
-
-    background:rgba(255,255,255,.04);
-
-    border:1px solid rgba(255,255,255,.08);
-
-    backdrop-filter:blur(25px);
-
-    box-shadow:
-    0 25px 70px rgba(0,0,0,.45);
-
-    transition:.45s;
-
+.about-image-wrapper {
+    width: 100%;
+    height: auto;
+    border-radius: 40px;
+    overflow: hidden;
+    position: relative;
+    background: rgba(255,255,255,.04);
+    border: 1px solid rgba(255,255,255,.08);
+    backdrop-filter: blur(25px);
+    box-shadow: 0 25px 70px rgba(0,0,0,.45);
+    transition: .45s;
 }
 
 .about-image-wrapper:hover{

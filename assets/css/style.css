@@ -5664,7 +5664,7 @@ ABOUT REVEAL
 
 }
 
-.about-title{
+.reveal-title{
 
     position:absolute;
 
@@ -5682,7 +5682,7 @@ ABOUT REVEAL
 
 }
 
-.about-title span{
+.reveal-title span{
 
     font-size:clamp(70px,12vw,180px);
 
@@ -5828,7 +5828,7 @@ ABOUT REVEAL RESPONSIVE
         width:min(90vw,700px);
     }
 
-    .about-title span{
+    .reveal-title span{
         font-size:clamp(60px,10vw,140px);
     }
 
@@ -5843,7 +5843,7 @@ ABOUT REVEAL RESPONSIVE
 
 }
 
-    .about-title{
+    .reveal-title{
 
         flex-direction:column;
         gap:5px;
@@ -5851,7 +5851,7 @@ ABOUT REVEAL RESPONSIVE
 
     }
 
-    .about-title span{
+    .reveal-title span{
 
         font-size:clamp(50px,12vw,90px);
         letter-spacing:3px;
@@ -5889,7 +5889,7 @@ ABOUT REVEAL RESPONSIVE
 
 
 
-    .about-title span{
+    .reveal-title span{
 
         font-size:48px;
 
@@ -5925,7 +5925,7 @@ ABOUT REVEAL RESPONSIVE
 
 }
 
-    .about-title span{
+    .reveal-title span{
 
         font-size:36px;
         letter-spacing:2px;

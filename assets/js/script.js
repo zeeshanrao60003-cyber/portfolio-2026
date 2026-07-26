@@ -478,7 +478,7 @@ if (aboutSection) {
 
     })
 
-    .to(".about-title .left", {
+    .to(".reveal-title .left", {
 
         x: -250,
 
@@ -486,7 +486,7 @@ if (aboutSection) {
 
     },0)
 
-    .to(".about-title .right", {
+    .to(".reveal-title .right", {
 
         x: 250,
 

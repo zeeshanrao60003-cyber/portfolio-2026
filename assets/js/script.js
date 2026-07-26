@@ -442,3 +442,90 @@ behavior:"smooth"
 
 
 
+/*=====================================
+ABOUT IMAGE PARALLAX
+======================================*/
+
+/*=====================================
+ABOUT REVEAL ANIMATION
+======================================*/
+
+gsap.registerPlugin(ScrollTrigger);
+
+const aboutSection = document.querySelector(".about-reveal");
+
+if (aboutSection) {
+
+    gsap.set(".about-character", {
+        opacity: 0,
+        y: 180,
+        scale: 0.8
+    });
+
+    gsap.timeline({
+
+        scrollTrigger: {
+
+            trigger: ".about-reveal",
+
+            start: "top 70%",
+
+            end: "bottom 30%",
+
+            scrub: 1
+
+        }
+
+    })
+
+    .to(".about-title .left", {
+
+        x: -250,
+
+        ease: "power3.out"
+
+    },0)
+
+    .to(".about-title .right", {
+
+        x: 250,
+
+        ease: "power3.out"
+
+    },0)
+
+    .to(".about-character", {
+
+        opacity:1,
+
+        y:0,
+
+        scale:1,
+
+        ease:"power3.out"
+
+    },0);
+
+}
+
+
+/*=====================================
+FLOATING IMAGE
+======================================*/
+
+gsap.to(".about-character",{
+
+    y:-20,
+
+    duration:3,
+
+    repeat:-1,
+
+    yoyo:true,
+
+    ease:"sine.inOut"
+
+});
+
+
+

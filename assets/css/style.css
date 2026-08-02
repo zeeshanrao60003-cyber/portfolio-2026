@@ -5190,45 +5190,9 @@ Floating Icons
 
 }
 
-.float-icon.js{
 
-    left:14%;
 
-    bottom:20%;
 
-    animation-delay:2s;
-
-}
-
-.float-icon.html{
-
-    right:12%;
-
-    bottom:18%;
-
-    animation-delay:3s;
-
-}
-
-.float-icon.css{
-
-    left:28%;
-
-    top:55%;
-
-    animation-delay:4s;
-
-}
-
-.float-icon.git{
-
-    right:28%;
-
-    top:58%;
-
-    animation-delay:5s;
-
-}
 
 /*=========================
 Animation

@@ -13,7 +13,7 @@ ABOUT PAGE
 }
 
 .about-hero-grid{
-
+padding-top: 150px;
     display:grid;
 
     grid-template-columns:460px 1fr;

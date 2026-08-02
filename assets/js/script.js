@@ -442,90 +442,90 @@ behavior:"smooth"
 
 
 
-/*=====================================
-ABOUT IMAGE PARALLAX
-======================================*/
+// /*=====================================
+// ABOUT IMAGE PARALLAX
+// ======================================*/
 
-/*=====================================
-ABOUT REVEAL ANIMATION
-======================================*/
+// /*=====================================
+// ABOUT REVEAL ANIMATION
+// ======================================*/
 
-gsap.registerPlugin(ScrollTrigger);
+// gsap.registerPlugin(ScrollTrigger);
 
-const aboutSection = document.querySelector(".about-reveal");
+// const aboutSection = document.querySelector(".about-reveal");
 
-if (aboutSection) {
+// if (aboutSection) {
 
-    gsap.set(".about-character", {
-        opacity: 0,
-        y: 180,
-        scale: 0.8
-    });
+//     gsap.set(".about-character", {
+//         opacity: 0,
+//         y: 180,
+//         scale: 0.8
+//     });
 
-    gsap.timeline({
+//     gsap.timeline({
 
-        scrollTrigger: {
+//         scrollTrigger: {
 
-            trigger: ".about-reveal",
+//             trigger: ".about-reveal",
 
-            start: "top 70%",
+//             start: "top 70%",
 
-            end: "bottom 30%",
+//             end: "bottom 30%",
 
-            scrub: 1
+//             scrub: 1
 
-        }
+//         }
 
-    })
+//     })
 
-    .to(".reveal-title .left", {
+//     .to(".reveal-title .left", {
 
-        x: -250,
+//         x: -250,
 
-        ease: "power3.out"
+//         ease: "power3.out"
 
-    },0)
+//     },0)
 
-    .to(".reveal-title .right", {
+//     .to(".reveal-title .right", {
 
-        x: 250,
+//         x: 250,
 
-        ease: "power3.out"
+//         ease: "power3.out"
 
-    },0)
+//     },0)
 
-    .to(".about-character", {
+//     .to(".about-character", {
 
-        opacity:1,
+//         opacity:1,
 
-        y:0,
+//         y:0,
 
-        scale:1,
+//         scale:1,
 
-        ease:"power3.out"
+//         ease:"power3.out"
 
-    },0);
+//     },0);
 
-}
+// }
 
 
-/*=====================================
-FLOATING IMAGE
-======================================*/
+// /*=====================================
+// FLOATING IMAGE
+// ======================================*/
 
-gsap.to(".about-character",{
+// gsap.to(".about-character",{
 
-    y:-20,
+//     y:-20,
 
-    duration:3,
+//     duration:3,
 
-    repeat:-1,
+//     repeat:-1,
 
-    yoyo:true,
+//     yoyo:true,
 
-    ease:"sine.inOut"
+//     ease:"sine.inOut"
 
-});
+// });
 
 
 

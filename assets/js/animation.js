@@ -33,20 +33,49 @@ if (document.querySelector(".hero")) {
         delay: .6
     });
 
-    gsap.from(".hero-stats", {
-        opacity: 0,
-        y: 30,
-        duration: .8,
-        delay: .8
-    });
 
-    gsap.from(".hero-right", {
-        opacity: 0,
-        x: 60,
-        duration: 1.2,
-        delay: .4,
-        ease: "power3.out"
-    });
+gsap.from(".hero-character", {
+
+    opacity: 0,
+    scale: .85,
+    y: 40,
+    duration: 1.2,
+    delay: .2,
+    ease: "power3.out"
+
+});
+
+gsap.from(".hero-bg-title", {
+
+    opacity: 0,
+    scale: .7,
+    duration: 1.5,
+    delay: .3,
+    ease: "power2.out"
+
+});
+
+
+gsap.from(".float-icon", {
+
+    opacity: 0,
+    scale: .4,
+    stagger: .15,
+    duration: .8,
+    delay: .8,
+    ease: "back.out(1.7)"
+
+});
+
+gsap.from(".hero-tech span", {
+
+    opacity: 0,
+    y: 20,
+    stagger: .08,
+    duration: .6,
+    delay: .7
+
+});
 
 }
 

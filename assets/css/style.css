@@ -263,12 +263,7 @@ box-shadow:0 15px 35px rgba(124,58,237,.35);
 
 
 
-/*about css*/
-.about{
 
-padding:140px 0;
-
-}
 
 .section-heading{
 
@@ -2870,7 +2865,7 @@ padding-left:36px;
 
 .section{
 
-    padding:140px 0;
+    padding:50px 0;
 
 }
 
@@ -2880,7 +2875,7 @@ padding-left:36px;
 
 .section{
 
-padding:90px 0;
+padding:50px 0;
 
 }
 
@@ -4914,7 +4909,7 @@ Badge
 
     margin-bottom:35px;
 
-    font-size:.95rem;
+    font-size:.80rem;
 
     color:#fff;
 
@@ -5320,7 +5315,7 @@ font-size:1rem;
 
 .hero-character img{
 
-width:290px;
+width:290px !important;
 
 }
 
@@ -5328,56 +5323,3 @@ width:290px;
 
 
 
-/* =====================================
-   HERO MARQUEE
-===================================== */
-
-.hero-character{
-    position:relative;
-    z-index:5;
-}
-
-.hero-marquee{
-    position:absolute;
-    top:260px;
-    left:50%;
-    transform:translateX(-50%);
-    width:200%;
-    overflow:hidden;
-    pointer-events:none;
-    z-index:1;
-}
-
-.hero-marquee span{
-    display:inline-block;
-    white-space:nowrap;
-    font-size:clamp(90px,12vw,200px);
-    font-weight:900;
-    text-transform:uppercase;
-    letter-spacing:12px;
-    color:#ffffff;
-    opacity:.04;
-    animation:heroMarquee 35s linear infinite;
-}
-
-@keyframes heroMarquee{
-    from{
-        transform:translateX(0);
-    }
-    to{
-        transform:translateX(-50%);
-    }
-}
-
-@media(max-width:768px){
-
-    .hero-marquee{
-        top:190px;
-    }
-
-    .hero-marquee span{
-        font-size:70px;
-        letter-spacing:6px;
-    }
-
-}

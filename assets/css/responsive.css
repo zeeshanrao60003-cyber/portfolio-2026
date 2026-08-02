@@ -825,11 +825,13 @@ ABOUT PAGE RESPONSIVE
 
 .about-hero-grid{
 
+padding-top: 20px;
 grid-template-columns:1fr;
 
 text-align:center;
 
 gap:60px;
+
 
 }
 
